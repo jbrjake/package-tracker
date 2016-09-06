@@ -2,7 +2,7 @@ var MasoniteModel = function () {};
 
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/packages');
+mongoose.connect('mongodb://mongo/packages');
 
 var db = mongoose.connection;
 MasoniteModel.prototype.db = db;
