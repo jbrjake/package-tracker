@@ -4,6 +4,8 @@ if (process.argv.length < 4) {
     process.exit(1);
 }
 
+console.log("Using username: " + process.argv[2]);
+
 var MasoniteAPI = require('./masonite-api.js');
 var api = new MasoniteAPI(process.argv[2], process.argv[3]);
 
