@@ -1,5 +1,7 @@
 console.log("Using username: " + process.env.MASONITEUSER);
 
+var startTime = new Date().getTime();
+while (new Date().getTime() < startTime + (5 * 1000) );
 var MasoniteAPI = require('./masonite-api.js');
 var api = new MasoniteAPI(process.env.MASONITEUSER, process.env.MASONITEPASS);
 
