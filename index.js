@@ -1,13 +1,7 @@
-if (process.argv.length < 4) {
-    console.log("INCLUDE MASONITE API USER AND PASS AS COMMAND LINE ARGUMENTS:");
-    console.log("    node index.js username password");
-    process.exit(1);
-}
-
-console.log("Using username: " + process.argv[2]);
+console.log("Using username: " + process.env.MASONITEUSER);
 
 var MasoniteAPI = require('./masonite-api.js');
-var api = new MasoniteAPI(process.argv[2], process.argv[3]);
+var api = new MasoniteAPI(process.env.MASONITEUSER, process.env.MASONITEPASS);
 
 var MasoniteModel = require('./masonite-model.js');
 var model = new MasoniteModel();
